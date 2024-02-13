@@ -7,6 +7,7 @@ public class CalculatorApplication {
     CalculatorApplication calculator = new CalculatorApplication();
   do{
     System.out.println("Choose an operation: (*, -, /, %, +)");
+    System.out.print("-->");
     //take input from user and decide which operation needs to perform
     String input = sc.next();
     char ch = input.charAt(0);
@@ -38,38 +39,41 @@ public class CalculatorApplication {
       int num1 = getInteger();
       System.out.print("Enter num2: ");
       int num2 = getInteger();
-        System.out.println("Multiply Result -> " + num1*num2);
+        System.out.println("Multiplication result -> " + num1*num2);
         break;
       case '+':
         System.out.print("Enter num1: ");
         int num3 = getInteger();
         System.out.print("Enter num2: ");
         int num4 = getInteger();
-        System.out.println("Addition -> " + (num3+num4));
+        System.out.println("Addition result -> " + (num3+num4));
         break;
       case '-':
         System.out.print("Enter num1: ");
         int num5 = getInteger();
         System.out.print("Enter num2: ");
         int num6 = getInteger();
-        System.out.println("Subtraction -> "+ (num5 - num6));
+        System.out.println("Subtraction result -> "+ (num5 - num6));
         break;
       case '/':
         System.out.print("Enter num1: ");
         int num7 = getInteger();
         System.out.print("Enter num2: ");
         int num8 = getInteger();
-        System.out.println("Division -> " + (num7 / num8));
+        if(num8 == 0){
+          System.out.println("Divide by zero error");
+        }
+        System.out.println("Division result -> " + (num7 / num8));
         break;
       case '%':
         System.out.print("Enter num1: ");
         int num9 = getInteger();
         System.out.print("Enter num2: ");
         int num10 = getInteger();
-        System.out.println("Modulo -> "+ (num9 % num10));
+        System.out.println("Modulo result -> "+ (num9 % num10));
         break;
       default:
-        System.out.println("Invalid Choice. Please enter valid choice.");
+        System.out.println("Invalid Choice. Please enter a valid choice.");
         break;
     }
   }
