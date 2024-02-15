@@ -86,7 +86,7 @@ public class CalculatorApplication {
       Scanner sc = new Scanner(System.in);
       String exitInput = sc.next();
       char ch1 = exitInput.charAt(0);
-      if(exitInput.length() == 1 && ch1  == 'n'){
+      if(exitInput.length() == 1 &&   ch1  == 'n'){
         return true;
         // exit = true;
         // break;

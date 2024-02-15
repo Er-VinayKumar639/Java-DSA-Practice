@@ -74,3 +74,4 @@ The idea of binary exponentiation is as follows:
 1. 2^7 = 2 * (2*2)^3
 2. 4^3 = 4 * (4*4)^1
 3. 16^1 = 16 * 1
+ 
