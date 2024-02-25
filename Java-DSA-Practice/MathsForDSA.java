@@ -2,7 +2,7 @@ public class MathsForDSA {
   public static void main(String[] args) {
     decimalToBinary(23);
     decimalToAnyBase(5,2);
-    binaryToDecimal(0);
+    binaryToDecimal(100010);
     anyBaseToDecimal(101,2);
     findEvenOdd(22);
     reverseNum(123);
@@ -41,10 +41,11 @@ public class MathsForDSA {
     int resNum = 0;
     int pos = 0;
     while(binaryNum>0){
-      int unitDigit = binaryNum %10;
-      binaryNum /= 10;
-      resNum += unitDigit * power(2,pos);
-      pos++;
+      if (binaryNum % 10 == 1) {
+        resNum += (1 << pos);
+      }
+       pos++;
+       binaryNum /= 10;
     }
     System.out.println("Result is : "+ resNum);
   }
